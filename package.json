@@ -1,6 +1,6 @@
 {
   "name": "@ibraheem4/clover-mcp",
-  "version": "1.2.0",
+  "version": "1.1.0",
   "description": "A Clover MCP server for interacting with Clover's API",
   "type": "module",
   "bin": {
@@ -14,7 +14,7 @@
     "build": "tsc && chmod +x build/index.js",
     "prepare": "npm run build",
     "watch": "tsc --watch",
-    "inspector": "node ./scripts/direct-inspector.js",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js",
     "publish:patch": "npm version patch && npm publish",
     "publish:minor": "npm version minor && npm publish",
     "publish:major": "npm version major && npm publish"
@@ -27,7 +27,6 @@
     "http-proxy": "^1.18.1"
   },
   "devDependencies": {
-    "@modelcontextprotocol/inspector": "0.6.0",
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.24",
     "typescript": "^5.3.3"
