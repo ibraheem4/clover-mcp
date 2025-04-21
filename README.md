@@ -1,5 +1,7 @@
 # Clover MCP (Model Context Protocol) Server
 
+[![smithery badge](https://smithery.ai/badge/@ibraheem4/clover-mcp)](https://smithery.ai/server/@ibraheem4/clover-mcp)
+
 A minimal MCP server for interacting with the Clover API using OAuth authentication.
 
 ## Overview
@@ -12,6 +14,14 @@ This MCP server allows generative AI models and other clients to access your Clo
 - Access individual items and orders
 
 ## Quick Start
+
+### Installing via Smithery
+
+To install Clover MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@ibraheem4/clover-mcp):
+
+```bash
+npx -y @smithery/cli install @ibraheem4/clover-mcp --client claude
+```
 
 ### Using with Claude AI (Recommended)
 
