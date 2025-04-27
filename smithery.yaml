@@ -1,0 +1,29 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - cloverClientId
+      - cloverClientSecret
+    properties:
+      cloverClientId:
+        type: string
+        description: Clover OAuth Client ID
+      cloverClientSecret:
+        type: string
+        description: Clover OAuth Client Secret
+      cloverBaseUrl:
+        type: string
+        default: https://apisandbox.dev.clover.com
+        description: Base URL for Clover API
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'node', args: ['build/index.js'], env: { CLOVER_CLIENT_ID: config.cloverClientId, CLOVER_CLIENT_SECRET: config.cloverClientSecret, CLOVER_BASE_URL: config.cloverBaseUrl } })
+  exampleConfig:
+    cloverClientId: your-clover-client-id
+    cloverClientSecret: your-clover-client-secret
+    cloverBaseUrl: https://apisandbox.dev.clover.com
