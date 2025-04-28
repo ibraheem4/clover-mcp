@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/mseep-audited.png)](https://mseep.ai/app/ibraheem4-clover-mcp)
+
 # Clover MCP (Model Context Protocol) Server
 
 [![smithery badge](https://smithery.ai/badge/@ibraheem4/clover-mcp)](https://smithery.ai/server/@ibraheem4/clover-mcp)
